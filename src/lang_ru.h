@@ -1,4 +1,4 @@
-#ifndef LANG_H_
+﻿#ifndef LANG_H_
 #define LANG_H_
 
 #define FONT(x) x##_tf
@@ -34,6 +34,8 @@ const String TXT_W   = F("З");
 const String TXT_WNW = F("ЗСЗ");
 const String TXT_NW  = F("СЗ");
 const String TXT_NNW = F("ССЗ");
+
+const String TXT_MPH = F("км/ч");
 
 //Day of the week
 const char* weekday_D[] = { "Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Сбт" };

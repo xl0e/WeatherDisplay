@@ -79,7 +79,7 @@ void draw_error_msg(String text) {
   display.fillRect(x + 6, y + 6, w, h, FG_COLOR);
   display.fillRect(x, y, w, h, FG_COLOR);
   display.fillRect(x + 1, y + 1, w - 2, h - 2, BG_COLOR);
-  display.setFont(&arial7pt7b);
+  display.setFont(&DEFALUT_FONT);
   Bounds b = draw_string(SCREEN_WIDTH / 2, y + 32, "ERROR", CENTER);
   draw_string(SCREEN_WIDTH / 2, b.y + b.h + 25, text, CENTER);
 }
@@ -177,7 +177,7 @@ void draw_wind(int x, int y, float angle, float windspeed)
   }
   display.setFont(&WEATHER_FONT);
   draw_string(x, y + Cradius + 15, wind_deg_to_direction(angle + 180), CENTER);
-  draw_string(x, y - Cradius - 7, String(windspeed, 1) + (config[UNITS] == "M" ? " m/s" : " mph"), CENTER);
+  draw_string(x, y - Cradius - 7, String(windspeed, 1) + String(TXT_SPACE) + (config[UNITS] == "M" ? TXT_M_S : TXT_MPH), CENTER);
 }
 
 void arrow(int x, int y, int asize, float aangle, int pwidth, int plength)
@@ -220,7 +220,7 @@ void draw_pressure_trend(int x, int y, float pressure, String slope)
   display.drawLine(x + 9, y - 5, x + 9, y - 4, BG_COLOR);
 
   float pressureHgMm = hPa_to_inHg(pressure);
-  Bounds b = draw_string(x + 17, y, String(pressureHgMm, 0) + "mm", LEFT);
+  Bounds b = draw_string(x + 17, y, String(pressureHgMm, 0) + TXT_MM, LEFT);
   
   x += b.x + b.w + 3;
 

@@ -124,7 +124,8 @@ bool update_local_time()
   PRINT(&timeinfo, "%a %b %d %Y %H:%M"); // Displays: Saturday, June 24 2017 14:05:49
   if (config[UNITS] == "metric")
   {
-    if ((config[LANG] == "CZ") || (config[LANG] == "DE") || (config[LANG] == "NL") || (config[LANG] == "PL") || (config[LANG] == "GR"))
+    const String lang = config[LANG];
+    if ((lang == "CZ") || (lang == "DE") || (lang == "NL") || (lang == "PL") || (lang == "GR"))
     {
       sprintf(day_output, "%s, %02u. %s %04u", weekday_D[timeinfo.tm_wday], timeinfo.tm_mday, month_M[timeinfo.tm_mon], (timeinfo.tm_year) + 1900); // day_output >> So., 23. Juni 2019 <<
     }

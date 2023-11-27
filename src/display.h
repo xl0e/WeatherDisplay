@@ -17,12 +17,18 @@
 // #include <GxGDEW0213M21/GxGDEW0213M21.h>  // 2.13" b/w Ultra wide temperature , form GoodDisplay
 #include <GxDEPG0213BN/GxDEPG0213BN.h>    // 2.13" b/w  form DKE GROUP
 
-#include "fonts/arial5pt7b.h"
-#include "fonts/arial6pt7b.h"
-#include "fonts/arial7pt7b.h"
-#include "fonts/arial8pt7b.h"
-#include "fonts/arial9pt7b.h"
-#include "fonts/arial13pt7b.h"
+// #include "fonts/arial5pt7b.h"
+// #include "fonts/arial6pt7b.h"
+// #include "fonts/arial7pt7b.h"
+// #include "fonts/arial8pt7b.h"
+// #include "fonts/arial9pt7b.h"
+// #include "fonts/arial13pt7b.h"
+
+#include "fonts/FreeSans5.h"
+#include "fonts/FreeSans6.h"
+#include "fonts/FreeSans9.h"
+#include "fonts/FreeSans13.h"
+
 
 #define SCREEN_WIDTH 248
 #define SCREEN_HEIGHT 122
@@ -42,14 +48,21 @@ enum AlignmentType
 #define EPD_MISO -1  // MISO is not used, as no data from display
 #define EPD_MOSI 23  // to EPD DIN
 
-#define DEFALUT_FONT arial6pt7b
-#define CITY_FONT arial9pt7b
-#define TEMP_FONT arial13pt7b
-#define WEATHER_FONT arial6pt7b
-#define FORECAST_FONT arial5pt7b
+// #define DEFALUT_FONT arial6pt7b
+#define DEFALUT_FONT FreeSans6pt8b
 
-#define BIG_FONT arial9pt7b
-#define SMALL_FONT arial6pt7b
+// #define CITY_FONT arial9pt7b
+#define CITY_FONT FreeSans9pt8b
+// #define TEMP_FONT arial13pt7b
+#define TEMP_FONT FreeSans13pt8b
+// #define WEATHER_FONT arial6pt7b
+#define WEATHER_FONT FreeSans6pt8b
+// #define FORECAST_FONT arial5pt7b
+#define FORECAST_FONT FreeSans5pt8b
+// #define BIG_FONT arial9pt7b
+#define BIG_FONT FreeSans9pt8b
+// #define SMALL_FONT arial6pt7b
+#define SMALL_FONT FreeSans6pt8b
 
 #define FG_COLOR GxEPD_BLACK
 #define BG_COLOR GxEPD_WHITE
